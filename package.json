@@ -1,0 +1,22 @@
+{
+  "name": "Natours",
+  "version": "1.0.0",
+  "description": "Project for practicing some advanced CSS",
+  "main": "index.js",
+  "scripts": {
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Electrolytful/natours-advanced-css.git"
+  },
+  "author": "Erhan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Electrolytful/natours-advanced-css/issues"
+  },
+  "homepage": "https://github.com/Electrolytful/natours-advanced-css#readme",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}
