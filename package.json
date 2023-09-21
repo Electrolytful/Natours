@@ -1,12 +1,12 @@
 {
-  "name": "Natours",
+  "name": "natours",
   "version": "1.0.0",
-  "description": "Project for practicing some advanced CSS",
+  "description": "A touring website built for people with a sense of adventure. The site showcases different tours that the customer can book as well as other customer reviews from people that have been on the different tours.",
   "author": "Erhan",
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "compile-sass": "node-sass -w ./sass/main.scss ./css/style.css"
+    "compile-sass": "node-sass -w ./sass/main.scss ./css/styles.css"
   },
   "repository": {
     "type": "git",
