@@ -540,6 +540,7 @@ body {
   position: fixed;
   top: 6rem;
   right: 6rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   z-index: 2000; }
 
 .navigation__background {
@@ -551,18 +552,22 @@ body {
   right: 6.5rem;
   background-image: radial-gradient(#7ed56f, #28b485);
   z-index: 1000;
-  transform: scale(80); }
+  transition: transform 0.8s cubic-bezier(0.85, 0, 0.15, 1); }
 
 .navigation__nav {
   height: 100vh;
-  width: 100%;
+  width: 0;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1500; }
+  overflow: hidden;
+  z-index: 1500;
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.68, -0.6, 0.32, 1.6); }
 
 .navigation__list {
   position: absolute;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -592,6 +597,13 @@ body {
 .navigation__icon {
   font-size: 3rem;
   margin-right: 1.5rem; }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(80); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%; }
 
 .section-about {
   background-color: #f7f7f7;
