@@ -541,7 +541,9 @@ body {
   top: 6rem;
   right: 6rem;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
-  z-index: 2000; }
+  text-align: center;
+  z-index: 2000;
+  cursor: pointer; }
 
 .navigation__background {
   height: 6rem;
@@ -604,6 +606,41 @@ body {
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
   width: 100%; }
+
+.navigation__burger {
+  position: relative;
+  margin-top: 3.4rem; }
+  .navigation__burger, .navigation__burger::before, .navigation__burger::after {
+    display: inline-block;
+    width: 3rem;
+    height: 2px;
+    background-color: #333;
+    transition: all .4s; }
+  .navigation__burger::before, .navigation__burger::after {
+    content: "";
+    position: absolute;
+    left: 0; }
+  .navigation__burger::before {
+    top: -.8rem; }
+  .navigation__burger::after {
+    top: .8rem; }
+
+.navigation__button:hover .navigation__burger::before {
+  transform: translateY(-0.3rem); }
+
+.navigation__button:hover .navigation__burger::after {
+  transform: translateY(0.3rem); }
+
+.navigation__checkbox:checked + .navigation__button .navigation__burger {
+  background-color: transparent; }
+
+.navigation__checkbox:checked + .navigation__button .navigation__burger::before {
+  top: 0;
+  transform: rotate(135deg); }
+
+.navigation__checkbox:checked + .navigation__button .navigation__burger::after {
+  top: 0;
+  transform: rotate(-135deg); }
 
 .section-about {
   background-color: #f7f7f7;
