@@ -9,9 +9,13 @@
 html {
     // global definition setting for 1rem (10px)
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     box-sizing: border-box;
     padding: 3rem;
 }
+
+// scrollbar styles
+@include scrollbar-settings($scrollbar-width, $track-color, $thumb-color, $thumb-border-color);

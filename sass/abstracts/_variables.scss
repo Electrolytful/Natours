@@ -21,6 +21,7 @@ $color-grey-dark-3: #333;
 
 // font
 $default-font-size: 1.6rem;
+$paragraph-font-size: 1.5rem;
 
 // grid
 $grid-width: 114rem;
@@ -31,3 +32,11 @@ $gutter-horizontal: 6rem;
 $border-radius: 3px;
 $border-radius-button-small: 2.5rem;
 $border-radius-button-large: 10rem;
+
+// scrollbar
+$scrollbar-width: 1.5rem;
+$track-color: transparent;
+$thumb-color: linear-gradient(180deg,
+    rgba($color-primary, .8),
+    rgba($color-primary-dark, .8));
+$thumb-border-color: transparent;

@@ -12,13 +12,14 @@
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
 
     <script src="https://kit.fontawesome.com/471ad6181a.js" crossorigin="anonymous"></script>
+    <script defer src="scripts/navigation.js"></script>
 
     <title>Natours | Exciting tours for adventurous people</title>
 </head>
 
 <body>
     <!-- NAV -->
-    <div class="navigation">
+    <div class="navigation u-no-select">
         <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
         <label for="navi-toggle" class="navigation__button">
             <span class="navigation__burger">&nbsp;</span>
@@ -28,11 +29,11 @@
 
         <nav class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link"><i class="navigation__icon fa-regular fa-circle-question"></i>About Natours</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><i class="navigation__icon fa-regular fa-smile-beam"></i>Your Benefits</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><i class="navigation__icon fa-regular fa-star"></i>Popular Tours</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><i class="navigation__icon fa-regular fa-comments"></i>Stories</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><i class="navigation__icon fa-regular fa-map"></i>Book Now</a></li>
+                <li class="navigation__item"><a href="#section-about" class="navigation__link"><i class="navigation__icon fa-regular fa-circle-question"></i>About Natours</a></li>
+                <li class="navigation__item"><a href="#section-features" class="navigation__link"><i class="navigation__icon fa-regular fa-smile-beam"></i>Your Benefits</a></li>
+                <li class="navigation__item"><a href="#section-tours" class="navigation__link"><i class="navigation__icon fa-regular fa-star"></i>Popular Tours</a></li>
+                <li class="navigation__item"><a href="#section-stories" class="navigation__link"><i class="navigation__icon fa-regular fa-comments"></i>Stories</a></li>
+                <li class="navigation__item"><a href="#popup" class="navigation__link"><i class="navigation__icon fa-regular fa-map"></i>Book Now</a></li>
             </ul>
         </nav>
     </div>
@@ -45,33 +46,33 @@
 
         <div class="header__text-box">
             <h1 class="heading-primary">
-                <span class="heading-primary--main">Outdoors</span>
-                <span class="heading-primary--sub">is where life happens</span>
+                <span class="heading-primary--main">Natours</span>
+                <span class="heading-primary--sub">Adventure awaits</span>
             </h1>
 
-            <a href="#" class="btn btn--white btn--animated">Discover our tours</a>
+            <a href="#section-tours" class="btn btn--white btn--animated">Discover our tours</a>
         </div>
     </header>
 
     <main>
         <!-- ABOUT SECTION -->
-        <section class="section-about u-no-select">
+        <section class="section-about" id="section-about">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
-                    Exciting tours for adventurous people
+                    A little bit about us
                 </h2>
             </div>
 
             <div class="row">
                 <div class="col-1-of-2">
-                    <h3 class="heading-tertiary u-margin-bottom-small">You're going to fall in love with nature</h3>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Who we are</h3>
                     <p class="paragraph">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla odio corporis ut quas repellat, hic at dignissimos totam animi voluptate reiciendis. Ullam quibusdam animi libero nesciunt perferendis voluptatum itaque totam?
+                        We are a team of adventurers, explorers, and thrill-seekers who are dedicated to curating extraordinary travel experiences for individuals, couples, families, and groups of all sizes. With years of experience in the travel industry, we have carefully crafted each of our adventure tours to ensure they encompass the perfect blend of adrenaline-pumping activities, cultural immersion, and natural beauty.
                     </p>
 
-                    <h3 class="heading-tertiary u-margin-bottom-small">Experience adventures you never have before</h3>
+                    <h3 class="heading-tertiary u-margin-bottom-small">Experience adventures like you never have before</h3>
                     <p class="paragraph">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla odio corporis ut quas repellat, hic at dignissimos totam animi.
+                        Embark on an adventure of a lifetime with Natours. Explore the world, push your limits, and create stories that will be told for generations. The journey begins here. Are you ready?
                     </p>
 
                     <a href="#" class="btn-text">Learn more</a>
@@ -87,14 +88,14 @@
         </section>
 
         <!-- FEATURES SECTION -->
-        <section class="section-features u-no-select">
+        <section class="section-features u-no-select" id="section-features">
             <div class="row">
                 <div class="col-1-of-4">
                     <div class="feature-box">
                         <i class="feature-box__icon icon-basic-world"></i>
                         <h3 class="heading-tertiary u-margin-bottom-small">Explore the world</h3>
                         <p class="feature-box__text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus error qui provident corporis est recusandae!
+                            Travel to different areas of the world for a once in a lifetime experience with your family and loved ones!
                         </p>
                     </div>
                 </div>
@@ -104,7 +105,7 @@
                         <i class="feature-box__icon icon-basic-compass"></i>
                         <h3 class="heading-tertiary u-margin-bottom-small">Meet nature</h3>
                         <p class="feature-box__text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus error qui provident corporis est recusandae!
+                            Become more familiar with the beauty of nature and its natural inhabitants. See sights you will never forget!
                         </p>
                     </div>
                 </div>
@@ -114,7 +115,7 @@
                         <i class="feature-box__icon icon-basic-map"></i>
                         <h3 class="heading-tertiary u-margin-bottom-small">Find your way</h3>
                         <p class="feature-box__text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus error qui provident corporis est recusandae!
+                            Use maps provided by the team to branch off and explore all sorts of areas to your hearts content.
                         </p>
                     </div>
                 </div>
@@ -124,7 +125,7 @@
                         <i class="feature-box__icon icon-basic-heart"></i>
                         <h3 class="heading-tertiary u-margin-bottom-small">Live a healthier life</h3>
                         <p class="feature-box__text">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus error qui provident corporis est recusandae!
+                            Get plenty of fresh air and exercise whilst enjoying the wonders of nature, stay fit and healthy!
                         </p>
                     </div>
                 </div>
@@ -132,7 +133,7 @@
         </section>
 
         <!-- TOURS SECTION -->
-        <section class="section-tours">
+        <section class="section-tours u-no-select" id="section-tours">
             <div class="u-center-text u-margin-bottom-big">
                 <h2 class="heading-secondary">
                     Most popular tours
@@ -163,7 +164,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">£250</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -192,7 +193,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">£400</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -221,7 +222,7 @@
                                     <p class="card__price-only">Only</p>
                                     <p class="card__price-value">£650</p>
                                 </div>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -234,7 +235,7 @@
         </section>
 
         <!-- STORIES SECTION -->
-        <section class="section-stories">
+        <section class="section-stories" id="section-stories">
             <div class="bg-video">
                 <video class="bg-video__content" autoplay muted loop>
                     <source src="img/video.mp4" type="video/mp4">
@@ -258,9 +259,9 @@
                         </figcaption>
                     </figure>
                     <div class="story__text">
-                        <h3 class="heading-tertiary u-margin-bottom-small">I had the best week ever with my family</h3>
+                        <h3 class="heading-tertiary u-margin-bottom-small">An Unforgettable Adventure! ⭐⭐⭐⭐⭐</h3>
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere dolore fugiat delectus sequi doloribus, sit repellendus ipsam cumque dolor ea voluptatibus est provident iste nostrum ullam veritatis voluptates obcaecati adipisci recusandae! Molestias quia facilis dolorem laboriosam soluta omnis porro iusto.
+                            I recently had the privilege of embarking on an adventure with Natours, and I can't stop raving about the incredible experience! From start to finish, this trip exceeded all of my expectations. The small-group setting was ideal for fostering connections with fellow adventurers. I've made lifelong friends on this trip, and we shared incredible moments together, from conquering thrilling rapids to enjoying local cuisine in charming villages. What truly sets Natours apart is their commitment to safety. As someone who loves adventure but also values peace of mind, I felt completely at ease throughout the journey.
                         </p>
                     </div>
                 </div>
@@ -275,9 +276,9 @@
                         </figcaption>
                     </figure>
                     <div class="story__text">
-                        <h3 class="heading-tertiary u-margin-bottom-small">Wow! It has been such a life-changing experience</h3>
+                        <h3 class="heading-tertiary u-margin-bottom-small">The Journey of a Lifetime!</h3>
                         <p>
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere dolore fugiat delectus sequi doloribus, sit repellendus ipsam cumque dolor ea voluptatibus est provident iste nostrum ullam veritatis voluptates obcaecati adipisci recusandae! Molestias quia facilis dolorem laboriosam soluta omnis porro iusto.
+                            I recently had the privilege of embarking on an adventure of a lifetime with Natours, and I'm still riding the high from the incredible experiences I had. Spectacular is an understatement! Whether it was summiting peaks, camping beneath the stars, or navigating through remote wilderness, each day was an exhilarating exploration of the world's wonders. I pushed my boundaries, discovered my strengths, and found inspiration in the natural beauty that surrounded us.
                         </p>
                     </div>
                 </div>
@@ -289,7 +290,7 @@
         </section>
 
         <!-- BOOKING SECTION -->
-        <section class="section-book">
+        <section class="section-book" id="section-book">
             <div class="row">
                 <div class="book">
                     <div class="book__form">
@@ -339,7 +340,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer u-no-select">
         <div class="footer__logo-box">
             <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
         </div>
@@ -363,6 +364,28 @@
             </div>
         </div>
     </footer>
+
+    <!-- POPUP -->
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
+                <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <h2 class="heading-secondary">Start booking now</h2>
+                <h3 class="heading-tertiary u-margin-bottom-small">Get ready to embark on a once in a lifetime experience!</h3>
+                <p class="popup__text u-margin-bottom-small">
+                    We believe in experiencing a destination like a local. Our itineraries are designed to immerse you in the culture, traditions, and flavors of each place, often taking you off the tourist trail to discover hidden gems. We prioritize your safety and the preservation of the environment and local cultures. Our tours are conducted with utmost care and respect for the destinations we visit. We invite you to embark on a journey of discovery with us. Whether you're setting out on your first solo trip, planning a family vacation, or simply seeking inspiration for your next adventure, Natours is here to guide you every step of the way.
+                    <br>
+                    <br>
+                    Adventure awaits, let's explore together!
+                </p>
+                <a href="#" class="btn btn--green">Book now</a>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
