@@ -6,6 +6,7 @@
     }
 }
 
+// MIXIN TO CENTER ABSOLUTE POSITIONED ELEMENTS
 @mixin absolute-center {
     position: absolute;
     top: 50%;
@@ -13,7 +14,7 @@
     transform: translate(-50%, -50%);
 }
 
-// scrollbar mixins
+// SCROLLBAR MIXIN
 @mixin scrollbar-settings($width, $track-color, $thumb-color, $thumb-border-color) {
     ::-webkit-scrollbar {
         width: $width;
@@ -27,5 +28,32 @@
         background: $thumb-color;
         border-radius: 100vw;
         border: .3rem solid $thumb-border-color;
+    }
+}
+
+// MEDIA QUERY MANAGER
+/*
+0 - 600px:         Phone
+600px - 900px:     Tablet portrait
+900px - 1200px:    Tablet landscape
+1200px - 1800px:   Normal styles
+1800px+ :          Big desktop
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5em) { @content };      // 600px
+    }
+
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25em) { @content };       // 900px
+    }
+
+    @if $breakpoint == tab-land {
+        @media (max-width: 75em) { @content };      // 1200px
+    }
+
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5em) { @content };      // 1800px
     }
 }
