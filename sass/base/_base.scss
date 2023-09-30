@@ -6,6 +6,11 @@
     box-sizing: inherit;
 }
 
+html,
+body {
+    overflow-x: hidden;
+}
+
 html {
     // global definition setting for 1rem
     font-size: 62.5%;   // 1rem = 10px
@@ -35,4 +40,6 @@ body {
 }
 
 // scrollbar styles
-@include scrollbar-settings($scrollbar-width, $track-color, $thumb-color, $thumb-border-color);
+@media (min-width: 31.25em) {  // 500px
+    @include scrollbar-settings($scrollbar-width, $track-color, $thumb-color, $thumb-border-color);
+}
