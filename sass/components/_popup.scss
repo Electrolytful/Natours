@@ -14,7 +14,7 @@
     &__content {
         @include absolute-center;
 
-        width: 75%;
+        width: 110rem;
         background-color: $color-white;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
         border-radius: 3px;
@@ -28,6 +28,17 @@
 
         @include respond(tab-land) {
             flex-direction: column;
+            width: 90rem;
+        }
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            width: 70rem;
+        }
+
+        @include respond(phone) {
+            flex-direction: column;
+            width: 40rem;
         }
     }
 
@@ -39,6 +50,10 @@
         @include respond(tab-land) {
             flex-direction: row;
             width: 100%;
+        }
+
+        @include respond(phone) {
+            display: none;
         }
     }
 
@@ -55,6 +70,11 @@
             width: 100%;
             align-items: center;
         }
+
+        @include respond(phone) {
+            width: 100%;
+            text-align: center;
+        }
     }
 
     &__img {
@@ -64,6 +84,10 @@
         @include respond(tab-land) {
             float: left;
             width: 50%;
+        }
+
+        @include respond(phone) {
+            display: none;
         }
     }
 
@@ -82,6 +106,18 @@
         -moz-hyphens: auto;
         -ms-hyphens: auto;
         hyphens: auto;
+
+        @include respond(phone) {
+            -moz-column-count: auto;
+            -moz-column-gap: 0;
+            -moz-column-rule: 0;
+
+            column-count: auto;
+            column-gap: 0;
+            column-rule: 0;
+
+            text-align: center;
+        }
     }
 
     // popup open states
@@ -107,6 +143,11 @@
             font-size: 4rem;
             text-decoration: none;
             transition: all .2s;
+
+            @include respond(phone) {
+                right: 2.5rem;
+                top: 2rem;
+            }
         }
 
         &:hover {
