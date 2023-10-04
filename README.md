@@ -58,11 +58,11 @@ Natours is a touring website showcasing different tours that users can book as w
 <img src="./screenshots/tours.png" alt="tours" width="1200"/>
 <img src="./screenshots/popup.png" alt="popup" width="1200"/>
 <img src="./screenshots/booking.png" alt="booking" width="1200"/>
-<img src="./screenshots/hero-phone.jpg" alt="hero phone" width="600"/>
-<img src="./screenshots/features-phone.jpg" alt="features phone" width="600"/>
-<img src="./screenshots/tours-phone.jpg" alt="tours phone" width="600"/>
-<img src="./screenshots/stories-phone.jpg" alt="stories phone" width="600"/>
-<img src="./screenshots/booking-phone.jpg" alt="booking phone" width="600"/>
+<img src="./screenshots/hero-phone.jpg" alt="hero phone" width="300"/>
+<img src="./screenshots/features-phone.jpg" alt="features phone" width="300"/>
+<img src="./screenshots/tours-phone.jpg" alt="tours phone" width="300"/>
+<img src="./screenshots/stories-phone.jpg" alt="stories phone" width="300"/>
+<img src="./screenshots/booking-phone.jpg" alt="booking phone" width="300"/>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
