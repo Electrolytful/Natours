@@ -112,14 +112,10 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  letter-spacing: .2rem;
-  transition: all .2s; }
+  letter-spacing: .2rem; }
   @media (max-width: 56.25em) {
     .heading-secondary {
       font-size: 3rem; } }
-  .heading-secondary:hover {
-    transform: skewY(2deg) skewX(15deg) scale(1.1);
-    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
 
 .heading-tertiary {
   font-size: 1.6rem;
@@ -526,7 +522,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(3px);
   z-index: 3000;
   opacity: 0;
   visibility: hidden;
