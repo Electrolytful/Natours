@@ -53,9 +53,16 @@ Natours is a touring website showcasing different tours that users can book as w
 
 <!-- Screenshots -->
 ## Screenshots
-![hero](./screenshots/hero.jpg)
-![about](./screenshots/about.jpg)
-![about-2](./screenshots/about-2.jpg)
+![hero](./screenshots/hero.png)
+![about](./screenshots/about.png)
+![tours](./screenshots/tours.png)
+![popup](./screenshots/popup.png)
+![booking](./screenshots/booking.png)
+![hero-phone](./screenshots/hero-phone.jpg)
+![features-phone](./screenshots/features-phone.jpg)
+![tours-phone](./screenshots/tours-phone.jpg)
+![stories-phone](./screenshots/stories-phone.jpg)
+![booking-phone](./screenshots/booking-phone.jpg)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -82,4 +89,3 @@ Natours is a touring website showcasing different tours that users can book as w
 
 [Firebase]: https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white
 [Firebase-url]: https://firebase.google.com
-
