@@ -1,4 +1,5 @@
 body {
+    // setting default font styles
     font-family: "Lato", sans-serif;
     font-weight: 400;
     line-height: 1.7;
@@ -6,11 +7,13 @@ body {
 }
 
 .heading-primary {
+    // styles from primary headings
     color: $color-white;
     text-transform: uppercase;
     margin-bottom: 6rem;
 
     &--main {
+        // main part of the primary heading
         display: block;
         font-size: 6rem;
         font-weight: 400;
@@ -19,11 +22,13 @@ body {
         animation: fadeInLeft 1s ease-out;
 
         @include respond(phone) {
+            // reducing letter spacing on width <= 600px
             letter-spacing: 1rem;
         }
     }
 
     &--sub {
+        // styles from the rest of the primary heading
         display: block;
         font-size: 2rem;
         font-weight: 700;
@@ -32,16 +37,19 @@ body {
         animation: fadeInRight 1s ease-out;
 
         @include respond(phone) {
+            // reducing letter spacing on width <= 600px
             letter-spacing: 1rem;
         }
     }
 }
 
 .heading-secondary {
+    // styles from secondary headings
     font-size: 3.5rem;
     text-transform: uppercase;
     font-weight: 700;
     display: inline-block;
+    // applying linear gradeint color to text by creating background image and clipping it to the text
     background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
     background-clip: text;
     -webkit-background-clip: text;
@@ -50,20 +58,24 @@ body {
     user-select: none;
 
     @include respond(tab-port) {
+        // reducing font size on width <= 900px
         font-size: 3rem;
     }
 }
 
 .heading-tertiary {
+    // styles from tertiary headings
     font-size: $default-font-size;
     font-weight: 700;
     text-transform: uppercase;
 }
 
 .paragraph {
+    // styles for paragraphs
     font-size: $paragraph-font-size;
 
     &:not(:last-child) {
+        // give every paragraph except the last a bottom margin
         margin-bottom: 3rem;
     }
 }

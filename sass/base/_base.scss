@@ -1,6 +1,7 @@
 *,
 *::before,
 *::after {
+    // resetting browser defaults
     margin: 0;
     padding: 0;
     box-sizing: inherit;
@@ -8,6 +9,7 @@
 
 html,
 body {
+    // no horizontal scroll on page
     overflow-x: hidden;
 }
 
@@ -27,24 +29,28 @@ html {
         font-size: 50%;   // 1rem = 8px
     }
 
+    // adding smooth scroll to page, when nav links are clicked they will smooth scroll
     scroll-behavior: smooth;
 }
 
 body {
     box-sizing: border-box;
+    // page by default has some padding
     padding: 3rem;
 
     @include respond(tab-port) {
+        // removing padding from page on device width <= 900px
         padding: 0;
     }
 }
 
 ::selection {
+    // adding custom color when area of the page such as text is selected
     background-color: $color-primary;
     color: $color-white;
 }
 
-// scrollbar styles
+// styles from custom scrollbar, only on devices of width >= 500px
 @media (min-width: 31.25em) {  // 500px
     @include scrollbar-settings($scrollbar-width, $track-color, $thumb-color, $thumb-border-color);
 }

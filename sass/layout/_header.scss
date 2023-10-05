@@ -1,6 +1,8 @@
 .header {
+    // styling for the header section
     position: relative;
     height: 95vh;
+    // set hero image to small version for 1x density screens
     background-image: linear-gradient(to right bottom,
             rgba($color-primary-light, 0.8),
             rgba($color-primary-dark, 0.8)),
@@ -9,6 +11,7 @@
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
 
+    // set hero image to bigger version on higher density and larger screens
     @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em) {
         background-image: linear-gradient(to right bottom,
             rgba($color-primary-light, 0.8),
@@ -17,9 +20,11 @@
     }
 
     @include respond(phone) {
+        // alter clip path on phone devices
         clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
     }
 
+    // styles for the logo
     &__logo-box {
         position: absolute;
         top: 4rem;
@@ -30,6 +35,7 @@
         height: 3.5rem;
     }
 
+    // styles for the text section
     &__text-box {
         position: absolute;
         top: 40%;

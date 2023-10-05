@@ -1,3 +1,4 @@
+// MXIN TO USE CLEARFIX HACK TO STOP FLOATING ELEMENTS FROM OVERFLOWING THEIR CONTAINER
 @mixin clearfix {
     &::after {
         content: "";
@@ -31,6 +32,25 @@
     }
 }
 
+// TEXT COLUMNS MIXIN
+@mixin text-column($count, $gap, $color) {
+    -moz-column-count: $count;
+    -moz-column-gap: $gap;
+    -moz-column-rule: 1px solid $color;
+
+    column-count: $count;
+    column-gap: $gap;
+    column-rule: 1px solid $color;
+}
+
+// TEXT HYPHENS MIXIN
+@mixin hyphens() {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
 // MEDIA QUERY MANAGER
 /*
 0 - 600px:         Phone
@@ -39,7 +59,6 @@
 1200px - 1800px:   Normal styles
 1800px+ :          Big desktop
 */
-
 @mixin respond($breakpoint) {
     @if $breakpoint == phone {
         @media only screen and (max-width: 37.5em) { @content };      // 600px

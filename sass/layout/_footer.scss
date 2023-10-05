@@ -1,12 +1,15 @@
 .footer {
+    // styles for the footer section
     background-color: $color-grey-dark-3;
     padding: 10rem 0;
     font-size: 1.4rem;
 
     @include respond(tab-port) {
+        // reduce padding on device width <= 900px
         padding: 8rem 0;
     }
 
+    // styles for the logo
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
@@ -22,6 +25,7 @@
     }
 
     &__navigation {
+        // styles for navigation list
         border-top: 1px solid $color-grey-dark;
         padding-top: 2rem;
         display: inline-block;
@@ -33,6 +37,7 @@
     }
 
     &__list {
+        // remove default list styling
         list-style: none;
     }
 
@@ -45,7 +50,6 @@
     }
 
     &__link {
-
         &:link,
         &:visited {
             color: $color-grey-light-1;

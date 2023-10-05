@@ -2,6 +2,7 @@
     position: relative;
 
     &__photo {
+        // each photo will have same width and be positioned on top of each other
         width: 55%;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
         position: absolute;
@@ -9,12 +10,14 @@
         outline-offset: 2rem;
 
         @include respond(tab-port) {
+            // when device width <= 900px, make each photo smaller, positioned relative and set them to align side by side instead
             position: relative;
             float: left;
             width: 33.33333333%;
             box-shadow: 0 1.5rem 3rem rgba($color-black, .2);
         }
 
+        // setting position of each photo
         &--p1 {
             left: 0;
             top: -2rem;
@@ -47,6 +50,7 @@
             }
         }
 
+        // when photo is hovered, increase scale and move in the y-axis, as well as showing the outline
         &:hover {
             transform: scale(1.05) translateY(-1rem);
             box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
@@ -55,6 +59,7 @@
         }
     }
 
+    // styles for the photos that are not being hovered when one of them is
     &:hover &__photo:not(:hover) {
         transform: scale(.95);
     }

@@ -1,10 +1,13 @@
 .navigation {
-
+    // styles for the navigation menu and button
+    // using the checkbox hack to open nav menu when button is clicked using pure css
     &__checkbox {
+        // not displaying the checkbox input
         display: none;
     }
 
     &__button {
+        // styles for the nav button, fixed to the same position on the page
         background-color: $color-white;
         height: 7rem;
         width: 7rem;
@@ -17,6 +20,7 @@
         z-index: 2000;
         cursor: pointer;
 
+        // change position of button on smaller devices
         @include respond(tab-port) {
             top: 4rem;
             right: 4rem;
@@ -29,6 +33,7 @@
     }
 
     &__background {
+        // styles for the background of the open nav menu, which animates to fill the screen when the menu is opened, initial position and size is behind the button
         height: 6rem;
         width: 6rem;
         border-radius: 50%;
@@ -39,6 +44,7 @@
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.85, 0, 0.15, 1);
 
+        // change initial position of background on smaller devices
         @include respond(tab-port) {
             top: 4.5rem;
             right: 4.5rem;
@@ -50,6 +56,7 @@
         }
     }
 
+    // styles for the nav menu
     &__nav {
         height: 100vh;
         width: 0;
@@ -76,7 +83,7 @@
     }
 
     &__link {
-
+        // styles for the nav links, have solid gradient applied to them originally out of view
         &:link,
         &:visited {
             display: inline-block;
@@ -93,6 +100,7 @@
 
         &:hover,
         &:active {
+            // when hovered, animate the solid gradient in
             background-position: 100%;
             color: $color-primary;
             transform: translateX(1rem);
@@ -104,18 +112,20 @@
         margin-right: 1.5rem;
     }
 
-    // FUNCTIONALITY
+    // functionality of the navigation
     &__checkbox:checked ~ &__background {
+        // animate the background to fill the entire screen when the checkbox is checked
         transform: scale(80);
     }
 
     &__checkbox:checked ~ &__nav {
+        // set the opacity of the nav so it is visible
         opacity: 1;
         width: 100%;
     }
 
-    // BURGER ICON
     &__burger {
+        // styles for the burger icon inside the button
         position: relative;
         margin-top: 3.4rem;
 
@@ -140,6 +150,7 @@
         &::after { top: .8rem; }
     }
 
+    // animate the burger icon when the button is hovered
     &__button:hover &__burger::before {
         transform: translateY(-.3rem);
     }
@@ -148,6 +159,7 @@
         transform: translateY(.3rem);
     }
 
+    // set the burger icon to look like a cross when the button is clicked and the checkbox is checked
     &__checkbox:checked + &__button &__burger {
         background-color: transparent;
     }

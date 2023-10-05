@@ -1,3 +1,4 @@
+// animation to fade in an element from the left
 @keyframes fadeInLeft {
     0% {
         opacity: 0;
@@ -14,6 +15,7 @@
     }
 }
 
+// animation to fade in an element from the right
 @keyframes fadeInRight {
     0% {
         opacity: 0;
@@ -30,6 +32,7 @@
     }
 }
 
+// animation to fade in an element from the bottom
 @keyframes fadeInBottom {
     0% {
         opacity: 0;

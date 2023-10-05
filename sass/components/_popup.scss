@@ -1,4 +1,5 @@
 .popup {
+    // fixed blurred background behind the popup itself
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -12,6 +13,7 @@
     visibility: hidden;
     transition: all .3s;
 
+    // styles for the popup
     &__content {
         @include absolute-center;
 
@@ -27,6 +29,7 @@
         transform: translate(-50%, -50%) scale(.5);
         transition: all 1s .2s;
 
+        // change width and flex direction on smaller devices
         @include respond(tab-land) {
             flex-direction: column;
             width: 90rem;
@@ -44,21 +47,25 @@
     }
 
     &__left {
+        // styles for the left section of the popup containing the images
         width: 33.333333%;
         display: flex;
         flex-direction: column;
 
         @include respond(tab-land) {
+            // change flex direction and width on device width <= 1200px
             flex-direction: row;
             width: 100%;
         }
 
         @include respond(phone) {
+            // do not display this section on phone devices
             display: none;
         }
     }
 
     &__right {
+        // styles for the right section of popup containing the main content
         width: 66.666667%;
         padding: 3rem 5rem;
 
@@ -67,6 +74,7 @@
         justify-content: center;
         gap: 1rem;
 
+        // change layout of content on smaller device widths
         @include respond(tab-land) {
             width: 100%;
             align-items: center;
@@ -79,6 +87,7 @@
     }
 
     &__img {
+        // styles for the img elements in the left section
         display: block;
         width: 100%;
 
@@ -93,47 +102,36 @@
     }
 
     &__text {
+        // styles for the text within the right section
         font-size: 1.4rem;
 
-        -moz-column-count: 2;
-        -moz-column-gap: 4rem;
-        -moz-column-rule: 1px solid $color-grey-light-2;
-
-        column-count: 2;
-        column-gap: 4rem;
-        column-rule: 1px solid $color-grey-light-2;
-
-        -webkit-hyphens: auto;
-        -moz-hyphens: auto;
-        -ms-hyphens: auto;
-        hyphens: auto;
+        // mixin for the text structure
+        @include text-column(2, 4rem, $color-grey-light-2);
+        // mixin to add hyphenation
+        @include hyphens;
 
         @include respond(phone) {
-            -moz-column-count: auto;
-            -moz-column-gap: 0;
-            -moz-column-rule: 0;
-
-            column-count: auto;
-            column-gap: 0;
-            column-rule: 0;
+            // remove text column structure and align all text to center on device width <= 600px
+            @include text-column(auto, 0, 0);
 
             text-align: center;
         }
     }
 
-    // popup open states
+    // styles for when the popup is opened
     &:target {
         opacity: 1;
         visibility: visible;
     }
 
     &:target &__content {
+        // animation for the popup when being opened
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
     }
 
     &__close {
-
+        // styles for the close link which closes the popup
         &:link,
         &:visited {
             display: inline-block;

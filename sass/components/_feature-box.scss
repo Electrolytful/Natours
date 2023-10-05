@@ -1,4 +1,5 @@
 .feature-box {
+    // styles for the boxes in the features section
     background-color: rgba($color-white, .8);
     font-size: 1.5rem;
     padding: 2.5rem;
@@ -8,10 +9,12 @@
     transition: all .3s;
 
     @include respond(tab-port) {
+        // reduce padding of boxes when width <= 900px
         padding: 2rem;
     }
 
     &__icon {
+        // styles for the icon inside the feature box, custom gradient color applied to icons by clipping linear gradient to text
         font-size: 6rem;
         margin-bottom: .5rem;
         display: inline-block;
@@ -21,11 +24,13 @@
         color: transparent;
 
         @include respond(tab-port) {
+            // no bottom margin on device width <= 900px
             margin-bottom: 0;
         }
     }
 
     &:hover {
+        // when hovered, increase scale and move on the y-axis
         transform: translateY(-1.5rem) scale(1.03);
     }
 }

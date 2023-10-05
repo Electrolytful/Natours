@@ -1,11 +1,12 @@
 .card {
-    // FUNCTIONALITY
+    // setting the card to have a fixed height and perspective
     position: relative;
     height: 52rem;
     perspective: 150rem;
     -moz-perspective: 150rem;
 
     &__side {
+        // styles for the sides of the card element, each side has a hidden backface-visibilty so the other side of the card is not visible when not in view
         height: 52rem;
         width: 100%;
         backface-visibility: hidden;
@@ -18,12 +19,15 @@
         overflow: hidden;
 
         &--front {
+            // styles for the front side of the card
             background-color: $color-white;
         }
 
         &--back {
+            // styles for the back side of the card, initially set to be rotated -180deg so not in view
             transform: rotateY(-180deg);
 
+            // different color styles for each card
             &-1 {
                 background-image: linear-gradient(to right bottom,
                     $color-secondary-light,
@@ -44,6 +48,7 @@
         }
     }
 
+    // when card is hovered, rotate the front side of the card 180deg, then rotate the back side so it is in view
     &:hover &__side--front {
         transform: rotateY(180deg);
     }
@@ -52,13 +57,15 @@
         transform: rotateY(0);
     }
 
-    // FRONT SIDE STYLING
+    // FRONT SIDE ELEMENT STYLES
     &__picture {
+        // styles for the picture on the front side of the card
         background-size: cover;
         height: 23rem;
         background-blend-mode: screen;
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
+        // different images and colors for each card
         &--1 {
             background-image: linear-gradient(to right bottom,
                 $color-secondary-light,
@@ -82,6 +89,7 @@
     }
 
     &__heading {
+        // styles for the heading of each card
         font-size: 2.8rem;
         font-weight: 300;
         text-transform: uppercase;
@@ -94,10 +102,12 @@
     }
 
     &__heading-span {
+        // span element within heading, if length of content is too long it will break onto a new line and keep the same styling
         padding: 1rem 1.5rem;
         -webkit-box-decoration-break: clone;
         box-decoration-break: clone;
 
+        // different gradient for each card
         &--1 {
             background-image: linear-gradient(to right bottom,
                 rgba($color-secondary-light, .85),
@@ -118,6 +128,7 @@
     }
 
     &__details {
+        // styles for the list of details of each tour
         padding: 3rem;
 
         ul {
@@ -137,14 +148,16 @@
         }
     }
 
-    // BACK SIDE STYLING
+    // BACK SIDE ELEMENT STYLES
     &__cta {
+        // styles for the call to action button
         @include absolute-center;
 
         width: 90%;
         text-align: center;
     }
 
+    // styles for the price description of each tour
     &__price-box {
         text-align: center;
         margin-bottom: 8rem;
@@ -161,10 +174,10 @@
         font-weight: 100;
     }
 
-    // RESPONSIVE CARDS
+    // MAKING CARDS RESPONSIVE
     @media only screen and (max-width: 56.25em),
         only screen and (hover: none) {
-        // FUNCTIONALITY
+        // removing the hover functionality of card and placing the content on the back side below the front side content instead
         height: auto;
         border-radius: $border-radius;
         background-color: $color-white;
@@ -189,7 +202,6 @@
             padding: 1rem 3rem;
         }
 
-        // BACK SIDE STYLING
         &__cta {
             position: relative;
             top: 0;

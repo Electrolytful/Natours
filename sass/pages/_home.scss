@@ -1,14 +1,17 @@
+// styles for each section of the website
 .section-about {
     background-color: $color-grey-light-1;
     padding: 25rem 0;
     margin-top: -20vh;
 
     @include respond(tab-port) {
+        // reduce padding on width <= 900px
         padding: 22rem 0;
     }
 }
 
 .section-features {
+    // skew section to give similiar effect to hero section
     padding: 20rem 0;
     background-image: linear-gradient(to right bottom,
             rgba($color-primary-light, 0.8),
@@ -19,10 +22,12 @@
     margin-top: -11rem;
 
     & > * {
+        // counter skew every child element
         transform: skewY(7deg);
     }
 
     @include respond(tab-port) {
+        // reduce padding on width <= 900px
         padding: 15rem 0;
     }
 }
@@ -33,6 +38,7 @@
     margin-top: -12vh;
 
     @include respond(tab-port) {
+        // reduce padding on width <= 900px
         padding: 22rem 0 12rem 0;
     }
 }
@@ -42,20 +48,24 @@
     padding: 15rem 0;
 
     @include respond(tab-port) {
+        // reduce padding on width <= 900px
         padding: 12rem 0;
     }
 }
 
 .section-book {
+    // styles for the booking section
     padding: 15rem 0;
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 
     @include respond(tab-port) {
+        // reduce padding on width <= 900px
         padding: 12rem 0;
     }
 }
 
 .book {
+    // gradient effect on background of the form
     background-image:  linear-gradient(105deg,
         rgba($color-white, .9) 0%,
         rgba($color-white, .9) 50%,
@@ -66,6 +76,7 @@
     box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
 
     @include respond(tab-land) {
+        // change gradient effect on device width <= 1200px
         background-image:  linear-gradient(105deg,
         rgba($color-white, .9) 0%,
         rgba($color-white, .9) 65%,
@@ -75,6 +86,7 @@
     }
 
     @include respond(tab-port) {
+        // change gradient effect on device width <= 900px
         background-image:  linear-gradient(to right,
         rgba($color-white, .9) 0%,
         rgba($color-white, .9) 100%),
@@ -82,6 +94,7 @@
     }
 
     &__form {
+        // styles for the form itself
         width: 50%;
         padding: 6rem;
 

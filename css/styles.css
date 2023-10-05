@@ -611,10 +611,10 @@ body {
       .popup__text {
         -moz-column-count: auto;
         -moz-column-gap: 0;
-        -moz-column-rule: 0;
+        -moz-column-rule: 1px solid 0;
         column-count: auto;
         column-gap: 0;
-        column-rule: 0;
+        column-rule: 1px solid 0;
         text-align: center; } }
   .popup:target {
     opacity: 1;

@@ -1,4 +1,5 @@
 .story {
+    // whole story is skewed on the x axis
     width: 75%;
     margin: 0 auto;
     box-shadow: 0 3rem 6rem rgba($color-black, .1);
@@ -11,6 +12,7 @@
     position: relative;
 
     @include respond(tab-port) {
+        // remove skew and change width and padding on device width <= 900px
         width: 100%;
         padding: 4rem;
         padding-left: 7rem;
@@ -18,14 +20,17 @@
     }
 
     & > * {
+        // apply a counter skew to every element within the story
         transform: skewX(12deg);
 
         @include respond(tab-port) {
+            // remove skew on device width <= 900px
             transform: skewX(0);
         }
     }
 
     &__shape {
+        // adding a circle shape with a shape outside property to make text wrap around the circle
         width: 15rem;
         height: 15rem;
         float: left;
@@ -35,12 +40,14 @@
     }
 
     &__image {
+        // image within the shape
         height: 100%;
         transform: translateX(-4rem) scale(1.4);
         transition: all .5s;
     }
 
     &__caption {
+        // center image caption on the image
         @include absolute-center;
 
         color: $color-white;
@@ -53,11 +60,13 @@
     }
 
     &:hover &__caption {
+        // when story hovered, display the image caption
         opacity: 1;
         translate: 0;
     }
 
     &:hover &__image {
+        // when story hovered, decrease scale of image and apply a blur and decrease brightness
         transform: translateX(-4rem) scale(1);
         filter: blur(3px) brightness(80%);
     }

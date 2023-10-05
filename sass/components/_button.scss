@@ -2,6 +2,7 @@
     &,
     &:link,
     &:visited {
+        // styles for the btn link and visited state
         text-transform: uppercase;
         text-decoration: none;
         padding: 1.5rem 4rem;
@@ -12,12 +13,13 @@
         font-size: $default-font-size;
         width: fit-content;
 
-        // change for <button> element
+        // changing defaults of <button> element
         border: none;
         cursor: pointer;
     }
 
     &:hover {
+        // adding some animations on the y axis and the after psuedo element to the btn when hovered
         transform: translateY(-0.3rem);
         box-shadow: 0 1rem 2rem rgba($color-black, .2);
 
@@ -28,11 +30,13 @@
     }
 
     &:active {
+        // styles for when the btn is being clicked or activated
         transform: translateY(-0.1rem);
         box-shadow: 0 0.5rem 1rem rgba($color-black, .2);
     }
 
     &::after {
+        // styles for the after psuedo element of the btn
         content: "";
         display: inline-block;
         height: 100%;
@@ -46,6 +50,7 @@
     }
 
     &--white {
+        // white modifier class to btn
         background-color: $color-white;
         color: $color-grey-dark;
 
@@ -55,6 +60,7 @@
     }
 
     &--green {
+        // green modifier class to btn
         background-color: $color-primary;
         color: $color-white;
 
@@ -64,17 +70,20 @@
     }
 
     &--animated {
+        // modifier class to btn, applies fade in animation when loaded
         animation: fadeInBottom 1s ease-out .75s;
         animation-fill-mode: backwards;
     }
 
 
     &-text {
+        // different btn style, btn-text, mainly used at the end of the sections
         margin-top: 1.5rem;
         border: 1px solid transparent;
 
         &:link,
         &:visited {
+            // styles for the link and visited state of btn-text
             color: $color-white;
             display: inline-block;
             text-decoration: none;
@@ -87,6 +96,7 @@
         }
 
         &:hover {
+            // styles for the hover state of btn-text
             color: $color-primary;
             background-color: transparent;
             border: 1px solid $color-primary;
@@ -95,6 +105,7 @@
         }
 
         &:active {
+            // styles for the active state of btn-text
             box-shadow: 0 .5rem 1rem rgba($color-black, .15);
             transform: translateY(0);
         }
