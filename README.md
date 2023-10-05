@@ -32,7 +32,7 @@
 ## About The Project
 Natours is a touring website showcasing different tours that users can book as well as other customer reviews from people that have already been on any one of the tours.
 
-<b><a href="https://natours-erhandev.vercel.app" target="__blank">Link to live demo</a></b>
+<a href="https://natours-erhandev.vercel.app" target="_blank">Link to live demo</a>
 
 <p align="right">(<a href="#readme-top">Back to top</a>)</p>
 
